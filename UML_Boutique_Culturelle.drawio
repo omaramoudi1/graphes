@@ -1,0 +1,87 @@
+<mxfile host="app.diagrams.net" agent="ChatGPT">
+  <diagram id="uml-boutique" name="UML - Boutique Culturelle">
+    <mxGraphModel dx="1363" dy="705" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="2200" pageHeight="1700" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="Article" parent="1" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;strokeWidth=1.5;spacing=0;overflow=fill;labelBackgroundColor=none;" value="&lt;div style=&quot;font-family:Consolas,monospace;font-size:13px;line-height:1.45&quot;&gt;&lt;div style=&quot;text-align:center;font-size:16px;padding:8px&quot;&gt;&amp;lt;&amp;lt;abstract&amp;gt;&amp;gt;&lt;br&gt;&lt;b&gt;Article&lt;/b&gt;&lt;/div&gt;&lt;hr style=&quot;border:0;border-top:1px solid #7b93b3&quot;/&gt;&lt;div style=&quot;padding:6px 10px;text-align:left&quot;&gt;- description : String {readOnly}&lt;br&gt;- prixInitial : double {readOnly}&lt;br&gt;- nombreExemplaires : int&lt;/div&gt;&lt;hr style=&quot;border:0;border-top:1px solid #7b93b3&quot;/&gt;&lt;div style=&quot;padding:6px 10px;text-align:left&quot;&gt;+ Article(String, double, int)&lt;br&gt;# verifierNumero(String, int) : String {static}&lt;br&gt;# verifierChamp(String, String) : String {static}&lt;br&gt;+ getDescription() : String&lt;br&gt;+ getPrixInitial() : double&lt;br&gt;+ getNombreExemplaires() : int&lt;br&gt;+ getNumero() : String {abstract}&lt;br&gt;+ placerApres(Article) : boolean&lt;br&gt;+ ajouter(int) : void&lt;br&gt;+ retirer(int) : boolean&lt;br&gt;+ calculerPrix() : double&lt;br&gt;+ calculerPrix(LocalDate) : double&lt;br&gt;# informationsCommunes() : String&lt;br&gt;+ toString() : String&lt;br&gt;+ versFichier() : String {abstract}&lt;/div&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="430" width="420" x="760" y="70" as="geometry" />
+        </mxCell>
+        <mxCell id="Livre" parent="1" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;strokeWidth=1.5;spacing=0;overflow=fill;labelBackgroundColor=none;" value="&lt;div style=&quot;font-family:Consolas,monospace;font-size:13px;line-height:1.45&quot;&gt;&lt;div style=&quot;text-align:center;font-size:16px;padding:8px&quot;&gt;&lt;b&gt;Livre&lt;/b&gt;&lt;/div&gt;&lt;hr style=&quot;border:0;border-top:1px solid #7b93b3&quot;/&gt;&lt;div style=&quot;padding:6px 10px;text-align:left&quot;&gt;- isbn : String {readOnly}&lt;br&gt;- nombrePages : int {readOnly}&lt;/div&gt;&lt;hr style=&quot;border:0;border-top:1px solid #7b93b3&quot;/&gt;&lt;div style=&quot;padding:6px 10px;text-align:left&quot;&gt;+ Livre(String, double, int, String, int)&lt;br&gt;+ getNumero() : String&lt;br&gt;+ getNombrePages() : int&lt;br&gt;+ calculerPrix(LocalDate) : double&lt;br&gt;+ versFichier() : String&lt;br&gt;+ toString() : String&lt;/div&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="230" width="390" x="580" y="735" as="geometry" />
+        </mxCell>
+        <mxCell id="Manuel" parent="1" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;strokeWidth=1.5;spacing=0;overflow=fill;labelBackgroundColor=none;" value="&lt;div style=&quot;font-family:Consolas,monospace;font-size:13px;line-height:1.45&quot;&gt;&lt;div style=&quot;text-align:center;font-size:16px;padding:8px&quot;&gt;&lt;b&gt;Manuel&lt;/b&gt;&lt;/div&gt;&lt;hr style=&quot;border:0;border-top:1px solid #7b93b3&quot;/&gt;&lt;div style=&quot;padding:6px 10px;text-align:left&quot;&gt;- matiere : String {readOnly}&lt;br&gt;- niveauScolaire : String {readOnly}&lt;/div&gt;&lt;hr style=&quot;border:0;border-top:1px solid #7b93b3&quot;/&gt;&lt;div style=&quot;padding:6px 10px;text-align:left&quot;&gt;+ Manuel(String, double, int, String, int, String, String)&lt;br&gt;+ getMatiere() : String&lt;br&gt;+ getNiveauScolaire() : String&lt;br&gt;+ versFichier() : String&lt;br&gt;+ toString() : String&lt;/div&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="210" width="420" x="460" y="1050" as="geometry" />
+        </mxCell>
+        <mxCell id="Magazine" parent="1" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;strokeWidth=1.5;spacing=0;overflow=fill;labelBackgroundColor=none;" value="&lt;div style=&quot;font-family:Consolas,monospace;font-size:13px;line-height:1.45&quot;&gt;&lt;div style=&quot;text-align:center;font-size:16px;padding:8px&quot;&gt;&lt;b&gt;Magazine&lt;/b&gt;&lt;/div&gt;&lt;hr style=&quot;border:0;border-top:1px solid #7b93b3&quot;/&gt;&lt;div style=&quot;padding:6px 10px;text-align:left&quot;&gt;- issn : String {readOnly}&lt;br&gt;- periodicite : String {readOnly}&lt;br&gt;- datePublication : LocalDate {readOnly}&lt;/div&gt;&lt;hr style=&quot;border:0;border-top:1px solid #7b93b3&quot;/&gt;&lt;div style=&quot;padding:6px 10px;text-align:left&quot;&gt;+ Magazine(String, double, int, String, String, LocalDate)&lt;br&gt;+ getNumero() : String&lt;br&gt;+ getPeriodicite() : String&lt;br&gt;+ getDatePublication() : LocalDate&lt;br&gt;+ calculerPrix(LocalDate) : double&lt;br&gt;+ versFichier() : String&lt;br&gt;+ toString() : String&lt;/div&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="270" width="420" x="1040" y="670" as="geometry" />
+        </mxCell>
+        <mxCell id="Etablissement" parent="1" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;strokeWidth=1.5;spacing=0;overflow=fill;labelBackgroundColor=none;" value="&lt;div style=&quot;font-family:Consolas,monospace;font-size:13px;line-height:1.45&quot;&gt;&lt;div style=&quot;text-align:center;font-size:16px;padding:8px&quot;&gt;&lt;b&gt;Etablissement&lt;/b&gt;&lt;/div&gt;&lt;hr style=&quot;border:0;border-top:1px solid #7b93b3&quot;/&gt;&lt;div style=&quot;padding:6px 10px;text-align:left&quot;&gt;+ MAX_ARTICLES : int = 200 {static, readOnly}&lt;br&gt;+ MAX_DEPOTS : int = 500 {static, readOnly}&lt;br&gt;- nom : String {readOnly}&lt;br&gt;- articles : Article[] {readOnly}&lt;br&gt;- depots : BonDepot[] {readOnly}&lt;br&gt;- nombreArticles : int&lt;br&gt;- nombreDepots : int&lt;/div&gt;&lt;hr style=&quot;border:0;border-top:1px solid #7b93b3&quot;/&gt;&lt;div style=&quot;padding:6px 10px;text-align:left&quot;&gt;+ Etablissement(String)&lt;br&gt;+ getNombreArticles() : int&lt;br&gt;+ getNombreDepots() : int&lt;br&gt;- insererArticle(Article) : boolean&lt;br&gt;- insererDepot(BonDepot) : boolean&lt;br&gt;+ ajouter(String, double, int, String, int) : boolean&lt;br&gt;+ ajouter(String, double, int, String, int, String, String) : boolean&lt;br&gt;+ ajouter(String, double, int, String, String, LocalDate) : boolean&lt;br&gt;+ rechercher(String) : Article&lt;br&gt;+ ajouter(String, int) : boolean&lt;br&gt;+ retirer(String, int) : boolean&lt;br&gt;+ ajouter(BonDepot) : boolean&lt;br&gt;+ ajouter(BonDepot, Article[]) : boolean&lt;br&gt;+ lister() : void&lt;br&gt;+ lister(String) : void&lt;br&gt;+ lister(String, LocalDate, LocalDate) : void&lt;br&gt;+ toString() : String&lt;br&gt;+ versFichierArticles(String) : void&lt;br&gt;+ depuisFichierArticles(String) : void&lt;br&gt;+ versFichierDepots(String) : void&lt;br&gt;+ depuisFichierDepots(String) : void&lt;/div&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="630" width="610" x="40" y="80" as="geometry" />
+        </mxCell>
+        <mxCell id="BonDepot" parent="1" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;strokeWidth=1.5;spacing=0;overflow=fill;labelBackgroundColor=none;" value="&lt;div style=&quot;font-family:Consolas,monospace;font-size:13px;line-height:1.45&quot;&gt;&lt;div style=&quot;text-align:center;font-size:16px;padding:8px&quot;&gt;&lt;b&gt;BonDepot&lt;/b&gt;&lt;/div&gt;&lt;hr style=&quot;border:0;border-top:1px solid #7b93b3&quot;/&gt;&lt;div style=&quot;padding:6px 10px;text-align:left&quot;&gt;+ MAX_LIGNES : int = 20 {static, readOnly}&lt;br&gt;- prochainNumero : int {static}&lt;br&gt;- numero : int {readOnly}&lt;br&gt;- telephone : String {readOnly}&lt;br&gt;- dateEmission : LocalDate {readOnly}&lt;br&gt;- lignes : LigneDepot[] {readOnly}&lt;br&gt;- nombreLignes : int&lt;/div&gt;&lt;hr style=&quot;border:0;border-top:1px solid #7b93b3&quot;/&gt;&lt;div style=&quot;padding:6px 10px;text-align:left&quot;&gt;+ BonDepot(String)&lt;br&gt;- BonDepot(int, String, LocalDate)&lt;br&gt;~ depuisFichier(int, String, LocalDate) : BonDepot {static}&lt;br&gt;~ mettreAJourProchainNumero(int) : void {static}&lt;br&gt;+ getNumero() : int&lt;br&gt;+ getTelephone() : String&lt;br&gt;+ getDateEmission() : LocalDate&lt;br&gt;+ getNombreArticles() : int&lt;br&gt;+ getLigne(int) : LigneDepot&lt;br&gt;+ ajouterLigne(String, int) : boolean&lt;br&gt;+ versFichier() : String&lt;br&gt;+ toString() : String&lt;/div&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="450" width="460" x="1510" y="90" as="geometry" />
+        </mxCell>
+        <mxCell id="LigneDepot" parent="1" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;strokeWidth=1.5;spacing=0;overflow=fill;labelBackgroundColor=none;" value="&lt;div style=&quot;font-family:Consolas,monospace;font-size:13px;line-height:1.45&quot;&gt;&lt;div style=&quot;text-align:center;font-size:16px;padding:8px&quot;&gt;&lt;b&gt;LigneDepot&lt;/b&gt;&lt;/div&gt;&lt;hr style=&quot;border:0;border-top:1px solid #7b93b3&quot;/&gt;&lt;div style=&quot;padding:6px 10px;text-align:left&quot;&gt;- numero : String {readOnly}&lt;br&gt;- nombreExemplaires : int&lt;/div&gt;&lt;hr style=&quot;border:0;border-top:1px solid #7b93b3&quot;/&gt;&lt;div style=&quot;padding:6px 10px;text-align:left&quot;&gt;+ LigneDepot(String, int)&lt;br&gt;+ getNumero() : String&lt;br&gt;+ getNombreExemplaires() : int&lt;br&gt;+ ajouter(int) : void&lt;br&gt;+ versFichier() : String&lt;br&gt;+ toString() : String&lt;/div&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="230" width="420" x="1540" y="840" as="geometry" />
+        </mxCell>
+        <mxCell id="Main" parent="1" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;strokeWidth=1.5;spacing=0;overflow=fill;labelBackgroundColor=none;" value="&lt;div style=&quot;font-family:Consolas,monospace;font-size:13px;line-height:1.45&quot;&gt;&lt;div style=&quot;text-align:center;font-size:16px;padding:8px&quot;&gt;&lt;b&gt;Main&lt;/b&gt;&lt;/div&gt;&lt;hr style=&quot;border:0;border-top:1px solid #7b93b3&quot;/&gt;&lt;div style=&quot;padding:6px 10px;text-align:left&quot;&gt;- FICHIER_ARTICLES : String {static, readOnly}&lt;br&gt;- FICHIER_DEPOTS : String {static, readOnly}&lt;/div&gt;&lt;hr style=&quot;border:0;border-top:1px solid #7b93b3&quot;/&gt;&lt;div style=&quot;padding:6px 10px;text-align:left&quot;&gt;- demander(Scanner, String) : String {static}&lt;br&gt;- demanderEntier(Scanner, String, int, int) : int {static}&lt;br&gt;- demanderPrix(Scanner) : double {static}&lt;br&gt;- demanderDate(Scanner, String) : LocalDate {static}&lt;br&gt;- creerArticle(Scanner, int, String, int) : Article {static}&lt;br&gt;- ajouterArticle(Etablissement, Article) : boolean {static}&lt;br&gt;- nouveauArticle(Scanner, Etablissement, int) : void {static}&lt;br&gt;- deposer(Scanner, Etablissement) : void {static}&lt;br&gt;- menu() : void {static}&lt;br&gt;- sauvegarder(Etablissement) : void {static}&lt;br&gt;+ main(String[]) : void {static}&lt;/div&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="330" width="390" x="30" y="1080" as="geometry" />
+        </mxCell>
+        <mxCell id="edge-Livre-Article" edge="1" parent="1" source="Livre" style="endArrow=block;endFill=0;endSize=18;strokeWidth=2;edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;labelBackgroundColor=none;fontColor=default;" target="Article" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge-Magazine-Article" edge="1" parent="1" source="Magazine" style="endArrow=block;endFill=0;endSize=18;strokeWidth=2;edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;labelBackgroundColor=none;fontColor=default;" target="Article" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1250" y="620" />
+              <mxPoint x="970" y="620" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="edge-Manuel-Livre" edge="1" parent="1" source="Manuel" style="endArrow=block;endFill=0;endSize=18;strokeWidth=2;edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;labelBackgroundColor=none;fontColor=default;" target="Livre" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge-Etablissement-Article" edge="1" parent="1" source="Etablissement" style="startArrow=diamond;startFill=1;startSize=18;endArrow=none;strokeWidth=2;edgeStyle=orthogonalEdgeStyle;html=1;labelBackgroundColor=none;fontColor=default;" target="Article" value="0..200">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge-Etablissement-BonDepot" edge="1" parent="1" style="startArrow=diamond;startFill=1;startSize=18;endArrow=none;strokeWidth=2;edgeStyle=orthogonalEdgeStyle;html=1;labelBackgroundColor=none;fontColor=default;entryX=-0.006;entryY=0.97;entryDx=0;entryDy=0;entryPerimeter=0;" target="BonDepot" value="0..500">
+          <mxGeometry relative="1" x="-0.0008" as="geometry">
+            <Array as="points">
+              <mxPoint x="1507.2" y="530" />
+            </Array>
+            <mxPoint x="640.0000000000002" y="530" as="sourcePoint" />
+            <mxPoint x="1500" y="449.9999999999999" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="edge-BonDepot-LigneDepot" edge="1" parent="1" source="BonDepot" style="startArrow=diamond;startFill=1;startSize=18;endArrow=none;strokeWidth=2;edgeStyle=orthogonalEdgeStyle;html=1;labelBackgroundColor=none;fontColor=default;" target="LigneDepot" value="0..20">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge-LigneDepot-Article" edge="1" parent="1" source="LigneDepot" style="dashed=1;endArrow=open;edgeStyle=orthogonalEdgeStyle;html=1;labelBackgroundColor=none;fontColor=default;exitX=0;exitY=0.5;exitDx=0;exitDy=0;" target="Article" value="ISBN / ISSN">
+          <mxGeometry relative="1" x="-0.105" as="geometry">
+            <mxPoint as="offset" />
+            <Array as="points">
+              <mxPoint x="1490" y="955" />
+              <mxPoint x="1490" y="410" />
+            </Array>
+            <mxPoint x="1570.0000000000005" y="955" as="sourcePoint" />
+            <mxPoint x="1000" y="500" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="edge-Main-Etablissement" edge="1" parent="1" source="Main" style="dashed=1;endArrow=open;edgeStyle=orthogonalEdgeStyle;html=1;labelBackgroundColor=none;fontColor=default;" target="Etablissement" value="utilise">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge-Main-BonDepot" edge="1" parent="1" style="dashed=1;endArrow=open;edgeStyle=orthogonalEdgeStyle;html=1;labelBackgroundColor=none;fontColor=default;entryX=1;entryY=0.844;entryDx=0;entryDy=0;entryPerimeter=0;" target="BonDepot" value="crée">
+          <mxGeometry relative="1" x="-0.188" as="geometry">
+            <Array as="points">
+              <mxPoint x="2030" y="1295" />
+              <mxPoint x="2030" y="469.8" />
+            </Array>
+            <mxPoint x="420" y="1295" as="sourcePoint" />
+            <mxPoint x="1740" y="590" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
